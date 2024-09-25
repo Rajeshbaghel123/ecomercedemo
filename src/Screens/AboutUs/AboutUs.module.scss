@@ -1,0 +1,169 @@
+:root {
+    --themeBlack: #000000d6;
+    --themeOrange: #FF4901;
+    --themeYellow: #FCB822;
+    --themeWhite: #FFFFFF;
+  }
+
+
+.aboutMain{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 1rem;
+    color: #333;
+    background-image: url(../../Assets/AboutUsBg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        margin-top: 25vh;
+        margin-left: 10%;
+        font-size: 2.6rem;
+        font-family: 'Krona One', sans-serif;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .aboutMain{
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-size: 2rem;
+            margin: 0;
+        }
+    }
+    
+}
+
+.text{
+    padding: 0 1rem;
+    width: 800px;
+    max-width: 100%;
+    margin: 50px auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        width: 800px;
+        max-width: 100%;
+    }
+}
+
+
+
+.vision_mission{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    padding: 50px 1rem;
+    color: #333;
+    background: linear-gradient(to bottom, #FBE76E, #FBCC36);
+    border-radius: 20px;
+}
+
+.vision_mission_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 1200px;
+    max-width: 100%;
+
+    &:nth-child(2){
+        flex-wrap: wrap-reverse;
+    }
+}
+
+.vision_mission_img1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A7C9CD;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    aspect-ratio: 1;
+    max-width: 100%;
+    border-radius: 50%;
+    img{
+        width: 300px;
+        height: auto;
+        transform: translateY(-50px) scale(1.2);
+    }
+}
+
+.vision_mission_img2{
+    width: 350px;
+    aspect-ratio: 1;
+    max-width: 100%;
+
+    &:last-child{
+        width: 450px;
+    }
+}
+
+.vision_mission_text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 500px;
+    max-width: 100%;
+    h1{
+        font-size: 2rem;
+        font-family: 'Krona One', sans-serif;
+        margin-bottom: 40px;
+        color: white;
+    }
+    p{
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+
+
+.text2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    width: 1200px;
+    max-width: 100%;
+    margin: 50px auto;
+    text-align: center;
+    gap: 50px;
+    h1{
+        font-size: 2.6rem;
+        font-family: 'Krona One', sans-serif;
+        width: 800px;
+        max-width: 100%;
+    }
+    p{
+        width: 800px;
+        max-width: 100%;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border-radius: 30px;
+        background-color: #fbcd3600;
+        border: #333 solid 1px;
+        text-decoration: none;
+        &:hover{
+            background-color: var(--themeYellow);
+            border: none;
+        }
+    }
+}

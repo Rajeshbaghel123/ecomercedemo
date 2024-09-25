@@ -1,0 +1,122 @@
+:root {
+    --themeOrange: #ff4901;
+    --themeYellow: #fcb822;
+    --themeWhite: #ffffff;
+    --textColor: #333;
+  }
+  
+  .ourProducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background-color: var(--themeWhite);
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-family: 'Krona One', sans-serif;
+    color: var(--textColor);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .productGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1500px;
+  }
+  
+  .productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem;
+      color: var(--textColor);
+    }
+  
+    p {
+      font-size: 0.9rem;
+      color: var(--textColor);
+    }
+
+    .productImage {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      background-color: #E6E1CDA1;
+    }
+  
+    .productImage img {
+      width: 80px;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+  
+  .viewMoreButton {
+    font-size: 1rem;
+    padding: 10px 30px;
+    margin-top: 4rem;
+    border: 1px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      background: linear-gradient(90deg, var(--themeOrange), var(--themeYellow));
+      color: var(--themeWhite);
+      border: none;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .productGrid {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .productCard {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 2rem;
+    }
+  
+    .productCard {
+      max-width: 100%;
+      padding: 1rem;
+     
+    }
+  
+    .viewMoreButton {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+  }
+  

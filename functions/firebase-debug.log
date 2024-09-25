@@ -1,0 +1,72 @@
+[debug] [2024-09-20T12:22:37.979Z] ----------------------------------------------------------------------
+[debug] [2024-09-20T12:22:37.982Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\uddes\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2024-09-20T12:22:37.983Z] CLI Version:   13.15.2
+[debug] [2024-09-20T12:22:37.983Z] Platform:      win32
+[debug] [2024-09-20T12:22:37.983Z] Node Version:  v21.4.0
+[debug] [2024-09-20T12:22:37.984Z] Time:          Fri Sep 20 2024 17:52:37 GMT+0530 (India Standard Time)
+[debug] [2024-09-20T12:22:37.984Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-20T12:22:38.073Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-20T12:22:38.073Z] > authorizing via signed-in user (uddeshya.ud@samaavesh.org)
+[debug] [2024-09-20T12:22:38.074Z] [iam] checking project gpsdesk-5171c for permissions ["firebase.projects.get"]
+[debug] [2024-09-20T12:22:38.075Z] > refreshing access token with scopes: []
+[debug] [2024-09-20T12:22:38.077Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-09-20T12:22:38.077Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-20T12:22:38.458Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-09-20T12:22:38.459Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-20T12:22:38.465Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpsdesk-5171c:testIamPermissions [none]
+[debug] [2024-09-20T12:22:38.465Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpsdesk-5171c:testIamPermissions x-goog-quota-user=projects/gpsdesk-5171c
+[debug] [2024-09-20T12:22:38.466Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpsdesk-5171c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-09-20T12:22:40.287Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpsdesk-5171c:testIamPermissions 200
+[debug] [2024-09-20T12:22:40.287Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gpsdesk-5171c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-09-20T12:22:40.291Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-09-20T12:22:40.296Z] defaultcredentials: writing to file C:\Users\uddes\AppData\Roaming\firebase\uddeshya_ud_samaavesh.org_application_default_credentials.json
+[debug] [2024-09-20T12:22:40.298Z] DEBUG: Setting GAC to C:\Users\uddes\AppData\Roaming\firebase\uddeshya_ud_samaavesh.org_application_default_credentials.json
+[debug] [2024-09-20T12:22:40.299Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gpsdesk-5171c/adminSdkConfig [none]
+[debug] [2024-09-20T12:22:41.740Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gpsdesk-5171c/adminSdkConfig 200
+[debug] [2024-09-20T12:22:41.740Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gpsdesk-5171c/adminSdkConfig {"projectId":"gpsdesk-5171c","storageBucket":"gpsdesk-5171c.appspot.com","locationId":"asia-south1"}
+[debug] [2024-09-20T12:22:41.750Z] [functions] Watching "D:\PROGRAMING\Samaavesh\Trackidoo\trackidooo\functions" for Cloud Functions...
+[debug] [2024-09-20T12:22:41.754Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-09-20T12:22:43.328Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^3.4.2",
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-09-20T12:22:43.329Z] Building nodejs source
+[debug] [2024-09-20T12:22:43.329Z] Failed to find version of module node: reached end of search path D:\PROGRAMING\Samaavesh\Trackidoo\trackidooo\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2024-09-20T12:22:43.332Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-09-20T12:22:43.818Z] Found firebase-functions binary at 'D:\PROGRAMING\Samaavesh\Trackidoo\trackidooo\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8348
+
+[debug] [2024-09-20T12:22:48.841Z] Got response from /__/functions.yaml {"endpoints":{"createRazorpayOrder":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"createRazorpayOrder"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-09-20T12:22:53.878Z] [functions] Loaded functions definitions from source: createRazorpayOrder.
+[debug] [2024-09-20T12:22:53.879Z] [functions[us-central1-createRazorpayOrder]] http function initialized (http://127.0.0.1:5000/gpsdesk-5171c/us-central1/createRazorpayOrder).
+[info] i  functions: Loaded functions: createRazorpayOrder 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 

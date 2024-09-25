@@ -1,0 +1,141 @@
+//// Foooter
+///
+///
+///
+/// 
+
+
+:root {
+    --themeBlack: #000000d6;
+    --themeOrange: #FF4901;
+    --themeYellow: #FCB822;
+    --themeWhite: #FFFFFF;
+  }
+
+
+.footerSection {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 30px;
+    border-top: 1px #0000006B solid;
+    border-bottom: 1px #0000006B solid;
+  }
+  
+  .footerLinks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  
+  .footerLogos {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+      color: grey;
+      font-size: 0.7rem;
+    }
+  }
+  
+  .anantLogoFooter {
+    height: 60px;
+    width: auto;
+  }
+  
+  .socials {
+    display: flex;
+    gap: 10px;
+    img {
+      height: 25px;
+      width: auto;
+      filter: brightness(0);
+      &:hover{
+        transform: scale(1.1);
+        padding: 0 5px;
+        filter: brightness(1);
+      }
+    }
+    
+  }
+  
+  .links {
+    p {
+      text-align: left;
+      a {
+        font-size: 1rem;
+        color: var(--themeBlack);
+        text-decoration: none;
+        font-weight: bolder;
+        padding-bottom: 3px;
+        border-bottom: 4px var(--themeOrange) solid;
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          font-size: 1rem;
+          color: var(--themeBlack);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 870px) {
+    .links {
+      margin-top: 50px;
+      p {
+        a {
+          font-size: 0.7rem;
+        }
+      }
+      ul {
+        li {
+          a {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    * {
+      h1 {
+        font-size: 80%;
+      }
+    }
+  }
+  
+
+  .copyright{
+    width: 100%;
+    padding: 20px 1rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 20px;
+      li a{
+        text-decoration: none;
+        color: grey;
+        font-size: 0.8rem;
+      }
+    }
+  }

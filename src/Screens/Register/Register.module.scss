@@ -1,0 +1,261 @@
+:root {
+    --themeBlack: #000000d6;
+    --themeOrange: #FF4901;
+    --themeYellow: #FCB822;
+    --themeWhite: #FFFFFF;
+  }
+
+
+.downloadApp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 0;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap-reverse;
+    margin: 0 auto;
+}
+
+
+
+.downloadAppText{
+    flex: 1;
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem;
+    gap: 10px;
+    h1{
+        font-size: 2rem;
+        margin: 0;
+        font-family: 'Krona One', sans-serif;
+    }
+    p{
+        width: 500px;
+        max-width: 100%;
+    }
+}
+
+.downloadAppImageOut{
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 20px 1rem;
+    background: linear-gradient(to top, #FCB822, white);
+}
+
+.downloadAppImage{
+    background-image: url(../../Assets/EllipseCenter.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 600px;
+    aspect-ratio: 1;
+    max-width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+.downloadApp_box{
+    max-width: 100%;
+    display: flex;
+    align-items: start;
+    margin-top: 50px;
+    justify-content: center;
+    img{
+        width: 200px;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .downloadApp{
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .downloadApp{
+        padding-top: 250px;
+    }
+
+    .downloadAppImage{
+        img{
+            width: 220px;
+        }
+    }
+
+}
+
+
+.register_form {
+    background: white;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.register_form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Two-column input row */
+.input_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.input_container {
+    position: relative;
+    margin: 20px 0;
+    flex: 1;
+}
+
+.input_container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input_container input:focus {
+    border-color: var(--themeOrange);
+    box-shadow: 0 0 5px rgba(255, 149, 0, 0.5);
+}
+
+.input_container label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #aaa;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input_container input:focus + label,
+.input_container input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 0;
+    background: white;
+    font-size: 12px;
+    font-family: "Isidori-sans-bold";
+    color: var(--themeBlack);
+}
+
+.checkbox_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    label{
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.checkbox_container input {
+    margin-right: 10px;
+}
+
+/* Buttons in row layout */
+.buttons_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.create_btn, .google_btn {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 48%; /* For equal size buttons */
+}
+
+.create_btn {
+    background-color: #007bff;
+    font-family: "Isidori-sans-bold";
+    color: white;
+}
+
+.google_btn {
+    background-color: #2D3748;
+    color: white;
+    display: flex;
+    font-family: "Isidori-sans-bold";
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+
+.google_btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.create_btn:hover {
+    background-color: #0056b3;
+}
+
+.google_btn:hover {
+    background-color: var(--themeBlack);
+}
+
+.login_link {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    p{
+        width: 100%;
+    }
+}
+
+.login_link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login_link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input_row {
+        flex-direction: column;
+    }
+
+    .buttons_row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .create_btn, .google_btn {
+        width: 100%;
+    }
+}

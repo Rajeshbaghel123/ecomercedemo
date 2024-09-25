@@ -1,0 +1,33 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Isidori-sans-reg";
+  src: url(./Assets/IsidoriFont/IsidoraSans-Regular.woff);
+}
+
+@font-face {
+  font-family: "Isidori-sans-bold";
+  src: url(./Assets/IsidoriFont/IsidoraSans-Bold.woff);
+}
+
+@font-face {
+  font-family: "Isidori-sans-med";
+  src: url(./Assets/IsidoriFont/IsidoraSans-Medium.woff);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Isidori-sans-reg";
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #fff;
+}

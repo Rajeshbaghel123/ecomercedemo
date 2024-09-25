@@ -1,0 +1,155 @@
+:root {
+  --themeOrange: #ff4901;
+  --themeYellow: #fcb822;
+  --themeWhite: #ffffff;
+  --textColor: #333;
+}
+
+.cartPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 150px;
+}
+
+.heading {
+  text-align: left; /* Left-aligned heading */
+  font-size: 2.5rem;
+  font-family: "Isidori-sans-bold";
+  margin-bottom: 30px;
+}
+
+/* Main content divided into two columns */
+.cartContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Cart Table */
+.cartTable {
+  width: 65%; /* Taking two-thirds of the available space */
+  border-collapse: collapse;
+}
+
+.cartTable th, .cartTable td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cartItem img {
+  width: 100px;
+  height: 100px;
+}
+
+.productDetails {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.productImage_Details{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.quantityInput {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+  width: auto;
+  p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e7e7;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.increaseDecreaseButtons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ccc;
+  button{
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.quantityInput[type=number]::-webkit-inner-spin-button, 
+.quantityInput[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* Price Summary Section */
+.priceSummary {
+  width: 30%; /* Taking one-third of the available space */
+  padding: 20px;
+  background-color: var(--themeWhite);
+  border-radius: 10px;
+  h2{
+    border-bottom: var(--themeYellow) 4px solid;
+  }
+}
+
+.summaryDetail, .summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summaryTotal{
+  margin-top: 60px;
+  border-top: #ccc 1px solid;
+  padding-top: 10px;
+}
+
+.checkoutBtn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: var(--themeYellow);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Isidori-sans-bold";
+  margin-top: 20px;
+}
+
+.checkoutBtn:hover {
+  background-color: var(--themeOrange);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cartPage {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 250px;
+  }
+
+  .cartContent {
+    flex-direction: column;
+  }
+
+  .priceSummary {
+    width: 100%;
+  }
+
+  .cartTable {
+    width: 100%;
+  }
+}
+
+

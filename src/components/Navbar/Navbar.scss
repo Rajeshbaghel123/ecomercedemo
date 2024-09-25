@@ -1,0 +1,358 @@
+
+:root {
+  --themeBlack: #000000d6;
+  --themePink: #DC25B7;
+  --themeBlue: #3F89CF;
+  --themeOrange: #FF4901;
+  --themeYellow: #FCB822;
+  --themeWhite: #FFFFFF;
+}
+
+.navBox {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 0 2rem;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.81);
+  border-radius: 30px;
+  min-height: 5rem;
+  height: auto;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.nav.nav-scrolled {
+  color: white; /* Change text color after scrolling */
+  background-color: var(--themeBlack);
+
+  & .menu{
+    div{
+      background-color: white;
+    }
+    div:nth-child(2):after{
+      background-color: white;
+    }
+  }
+}
+
+
+
+
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links ul li a {
+  font-size: 0.8rem;
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none;
+  font-family: "Krona One", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: var(--themeOrange); /* Hover to white */
+}
+
+.navLogoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+
+.button-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-icons img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0);
+}
+
+.nav-scrolled .button-icons img{
+  filter: brightness(0) invert(1); ;
+}
+
+.profile-menu {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+    .dropbtn {
+      // background-color: #3F89CF;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      p{
+        background-color: #3F89CF;
+        border-radius: 6px;
+        color: #fff;
+        text-align: center;
+        font-family: 'Krona One', sans-serif;
+        padding: 2%;
+      }
+
+      a:hover {
+        background-color: #ddd;
+      }
+    }
+
+    &:hover .dropdown-content {
+      display: block;
+    }
+
+    // &:hover .dropbtn {
+    //   background-color: #3F89CF;
+    // }
+  }
+}
+
+.auth-menu {
+  display: flex;
+  gap: 15px;
+
+  .auth-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #3F89CF;
+    color: white;
+    text-decoration: none;
+  }
+
+  .auth-btn:hover {
+    background-color: #2d6fb6;
+  }
+}
+
+.topButton {
+  color: white;
+  font-size: 0.7rem;
+  padding: 10px 35px;
+  border-radius: 20px;
+  background: linear-gradient(to right, var(--themeOrange), var(--themeYellow));
+  text-decoration: none;
+  font-family: "Krona One", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.topButton:hover {
+  background: linear-gradient(to right, var(--themeYellow), var(--themeOrange));
+}
+
+.menu {
+  float: left;
+  padding: 2rem 0;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  width: 3rem;
+}
+.menu div {
+  width: 3rem;
+  height: 0.4rem;
+  background-color: var(--themeBlack);
+  margin-bottom: 0.4rem;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  transition: all 500ms ease;
+  position: absolute;
+}
+
+
+.menu div:nth-child(1) {
+  top: 1rem;
+}
+.menu div:nth-child(2) {
+  top: 1.8rem;
+}
+.menu div:nth-child(2):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 0.4rem;
+  background-color: var(--themeBlack);
+  -webkit-transition: all 350ms ease;
+  -moz-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+.menu div:nth-child(3) {
+  top: 2.6rem;
+}
+.menu.active div:nth-child(1),
+.menu.active div:nth-child(3) {
+  width: 0;
+}
+.menu.active div:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.menu.active div:nth-child(2):after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 1140px) {
+  .menu {
+      display: block;
+      cursor: pointer;
+  }
+
+  .nav-links {
+      background-color: var(--themeBlack);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-120vh);
+      transition: all 0.75s ease;
+  }
+
+  .nav-links ul {
+      flex-direction: column;
+      gap: 20px;
+  }
+}
+
+.nav-links-active {
+  transform: translateY(0);
+  ul li a{
+    color: var(--themeWhite);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .button-icons img {
+      width: 20px;
+      height: 20px;
+  }
+
+  .topButton {
+      font-size: 0.5rem;
+      padding: 10px 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav {
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 20px;
+      padding-bottom: 0;
+  }
+
+  .navLogoBox {
+      width: 200px;
+  }
+}
+
+.cart-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-icon {
+  width: 30px;  /* Adjust the size of the cart icon */
+  // margin-right: 8px;
+}
+
+.cart-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333; /* Text color */
+  transition: color 0.3s ease;
+}
+
+// .cart-quantity {
+//   font-size: 14px;
+//   color: #ff5722; /* The color for the quantity */
+//   font-weight: bold;
+//   margin-left: 5px;
+// }
+
+/* Hover effect */
+.cart-link:hover .cart-text {
+  color: #ff5722; /* Change text color on hover */
+}
+
+.cart-link:hover .cart-icon {
+  transform: scale(1.1);  /* Slight scale effect on hover */
+}
+
+/* Badge-like styling for the quantity number */
+.cart-quantity {
+  background-color: #ff5722;
+  border-radius: 12px;
+  padding: 1px 6px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+
+
+// .nav:hover {
+//   transform: translateX(10px) translateY(5px); 
+//   transition: transform 0.5s ease;
+//   background-color: var(--themeBlack);
+//   color: white;
+//   .button-icons img{
+//     filter: brightness(0) invert(1);
+//   }
+// }

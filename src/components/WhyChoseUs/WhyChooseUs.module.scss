@@ -1,0 +1,130 @@
+:root {
+    --themeBlack: #000000d6;
+    --themeOrange: #FF4901;
+    --themeYellow: #FCB822;
+    --themeWhite: #FFFFFF;
+  }
+  
+  .whyChooseUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    background: linear-gradient(to top, rgba(252, 184, 34, 0.45), white);
+  }
+  
+  .head {
+    width: 600px;
+    aspect-ratio: 1;
+    max-width: 100%;
+    background-image: url('../../Assets/EllipseCenter.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    h1 {
+      font-size: 3rem;
+      font-family: 'Krona One', sans-serif;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+  }
+  
+  .whyChooseUsBoxes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    transform: translateY(-30%);
+    gap: 20px;
+    padding: 0 2rem;
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      transform: none; 
+    }
+  }
+  
+  .singleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    gap: 20px;
+    text-align: center;
+  
+    h2 {
+      font-size: 1.5rem;
+      font-family: 'Krona One', sans-serif;
+    }
+  
+    span {
+      font-size: 0.8rem;
+      text-align: justify;
+      padding: 15px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    &:nth-child(1),
+    &:nth-child(3) {
+      transform: translateY(-25%);
+    }
+  
+    @media (max-width: 768px) {
+      transform: none;
+      width: 100%;
+      max-width: 300px;
+  
+      &:nth-child(1),
+      &:nth-child(3) {
+        transform: none;
+      }
+  
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  .singleBoxImg {
+    border-radius: 50%;
+    border: 2px solid var(--themeOrange);
+    width: 220px;
+    height: 220px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+    /* Assign images based on the order of the box */
+    &:nth-child(1) {
+      background-image: url('../../Assets/Rectangle-21.png');
+    }
+  
+    &:nth-child(2) {
+      background-image: url('../../Assets/Rectangle-22.png');
+    }
+  
+    &:nth-child(3) {
+      background-image: url('../../Assets/Rectangle-85.png');
+    }
+  
+    @media (max-width: 768px) {
+      width: 180px;
+      height: 180px;
+    }
+  
+    @media (max-width: 480px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  

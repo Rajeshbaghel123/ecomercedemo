@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "gpsdesk-5171c"
+  },
+  "targets": {},
+  "etags": {
+    "gpsdesk-5171c": {
+      "extensionInstances": {}
+    }
+  },
+  "dataconnectEmulatorConfig": {}
+}

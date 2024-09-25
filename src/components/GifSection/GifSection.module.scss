@@ -1,0 +1,98 @@
+:root {
+    --themeOrange: #ff4901;
+    --themeYellow: #fcb822;
+    --themeWhite: #ffffff;
+    --textColor: #333;
+  }
+  
+  .gifSection {
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem; /* Adjust padding for the overall section */
+    background: linear-gradient(to right, var(--themeOrange), var(--themeYellow));
+    color: var(--themeWhite);
+  }
+  
+ 
+
+  .gifContainer {
+    align-self: end;
+    flex: 1;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    .mobileGif {
+      width: 400px;
+      aspect-ratio: 1;
+      max-width: 100%; /* Limit the GIF size on larger screens */
+      border-radius: 15px;
+      transform: scale(1.5);
+      transform-origin: bottom center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .gifSection {
+    flex-direction: column-reverse;
+  }
+
+  .gifContainer {
+    align-self: center;
+    align-items: center;
+    .mobileGif {
+      transform: scale(1.1);
+    }
+  }
+
+  
+
+
+}
+  
+  .textContainer {
+    flex: 1;
+    padding: 1.5rem;
+  
+    .heading {
+      font-size: 2rem;
+      font-family: 'Krona One', sans-serif;
+      margin-bottom: 1.5rem;
+  
+      span {
+        font-weight: bold;
+      }
+  
+      @media (max-width: 1200px) {
+        font-size: 1.5rem;
+      }
+  
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
+    }
+  
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+  
+      @media (max-width: 1200px) {
+        font-size: 0.9rem;
+      }
+  
+      @media (max-width: 768px) {
+        font-size:  0.9rem;
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
+

@@ -1,0 +1,90 @@
+:root {
+    --themeBlack: #000000d6;
+    --themeOrange: #FF4901;
+    --themeYellow: #FCB822;
+    --themeWhite: #FFFFFF;
+  }
+
+
+.downloadApp{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 120px 1rem;
+    gap: 30px;
+    width: 1200px;
+    max-width: 100%;
+    flex-wrap: wrap-reverse;
+    margin: 0 auto;
+}
+
+
+
+.downloadAppText{
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    h1{
+        font-size: 2rem;
+        margin: 0;
+        font-family: 'Krona One', sans-serif;
+        margin-bottom: 30px;
+    }
+    p{
+        width: 500px;
+        max-width: 100%;
+    }
+}
+
+.downloadAppImage{
+    background-image: url(../../Assets/EllipseCenter.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 600px;
+    aspect-ratio: 1;
+    max-width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+.downloadApp_box{
+    max-width: 100%;
+    display: flex;
+    align-items: start;
+    margin-top: 100px;
+    justify-content: center;
+    img{
+        width: 200px;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .downloadApp{
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .downloadApp{
+        padding-top: 250px;
+    }
+
+    .downloadAppImage{
+        img{
+            width: 220px;
+        }
+    }
+
+}

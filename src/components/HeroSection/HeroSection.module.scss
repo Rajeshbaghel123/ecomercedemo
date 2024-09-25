@@ -1,0 +1,83 @@
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  z-index: -1; /* Places the video behind the content */
+}
+
+.heroContent {
+  position: absolute;
+  bottom: 20%; /* Position it close to the bottom */
+  left: 10%;
+  transform: translateY(0); /* Keeps it aligned to the left */
+  text-align: left; /* Aligns the text to the left */
+  color: white;
+  z-index: 2; /* Ensure content appears over the video */
+  max-width: 600px; /* Restrict width for readability */
+}
+
+.heroContent h1 {
+  font-family: 'Krona One', sans-serif; 
+  font-size: 2.2rem; 
+  margin-bottom: 30px; 
+  line-height: 1.2; 
+  margin-bottom: 80px; 
+}
+
+.exploreButton {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.exploreButton:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .heroContent {
+    bottom: 10%;
+    left: 5%;
+    max-width: 90%; /* Allow more space on mobile */
+    text-align: center; /* Center align content for smaller screens */
+  }
+
+  .heroContent h1 {
+    font-size: 1.8rem; /* Smaller font size for mobile screens */
+    margin-bottom: 50px; /* Reduce bottom margin */
+  }
+
+  .exploreButton {
+    font-size: 1rem; /* Adjust button size for mobile */
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 1.5rem; /* Further reduce font size on very small screens */
+    margin-bottom: 30px;
+  }
+
+  .exploreButton {
+    font-size: 0.9rem; /* Adjust button size */
+    padding: 6px 15px;
+  }
+}
